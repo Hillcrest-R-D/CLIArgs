@@ -15,7 +15,7 @@ module CLIArgs =
                 mch.Groups
                 |> Seq.toList
                 |> function
-                | _ :: g1 :: rest ->
+                | _ :: g1 :: rest -> //like ("--someFlag someArgValue", "--someFlag", "someArgValue")
                     Some (g1 |> _.Value,
                     rest 
                     |> function
@@ -23,6 +23,5 @@ module CLIArgs =
                     | _ -> None 
                     )
                 | _ -> None
-                // (groups |> (Seq.head << Seq.tail) |> _.Value, groups |> (Seq.head << Seq.tail << Seq.tail) |> _.Value) 
             ) 
         |> Seq.filter (Option.isSome) |> Seq.map (Option.get)
