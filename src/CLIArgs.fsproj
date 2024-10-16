@@ -1,12 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
+    <PropertyGroup>
+        <PackageId>CLIArgs</PackageId>
+        <Version>0.9.0</Version>
+        <Authors> Mackenzie F. Libby</Authors>
+        <Company>Hillcrest Research and Development LLC</Company>
+        <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <IsTestProject>false</IsTestProject>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="Library.fs" />
-  </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Library.fs" />
+        <None Include="../LICENSE" Pack="true" PackagePath="" />
+        <None Include="../README.md" Pack="true" PackagePath="" />
+    </ItemGroup>
 
 </Project>
